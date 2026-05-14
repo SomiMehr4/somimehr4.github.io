@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr Somayeh Mehrabankar — Quantum Physicist</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#0a1628;--teal:#1a6b5c;--teal-light:#e8f4f1;--gold:#c4922a;--gold-light:#fdf6e8;
+--text:#1a1a2e;--text-muted:#6b7280;--border:#e5e7eb;--white:#ffffff;--bg:#f8f9fa;
+}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);font-size:15px;line-height:1.6}
+nav{background:var(--navy);padding:0 2rem;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;height:56px}
+nav .logo{color:var(--white);font-family:'Crimson Pro',serif;font-size:1.2rem;font-weight:600;letter-spacing:0.02em}
+nav ul{display:flex;list-style:none;gap:0}
+nav ul li a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;font-weight:400;padding:0 1rem;height:56px;display:flex;align-items:center;letter-spacing:0.03em;transition:color 0.2s,background 0.2s}
+nav ul li a:hover{color:var(--white);background:rgba(255,255,255,0.08)}
+.hero{display:grid;grid-template-columns:1fr 280px;gap:3rem;max-width:960px;margin:0 auto;padding:3.5rem 2rem 2.5rem}
+.hero-text h1{font-family:'Crimson Pro',serif;font-size:2.2rem;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:0.3rem}
+.hero-text .title{font-size:14px;color:var(--teal);font-weight:500;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem}
+.hero-text .affil{font-size:14px;color:var(--text-muted);margin-bottom:1.2rem;line-height:1.5}
+.hero-text p{font-size:14.5px;color:var(--text);line-height:1.75;margin-bottom:1rem}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.2rem}
+.link-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:6px;font-size:12.5px;font-weight:500;text-decoration:none;transition:all 0.2s;border:1px solid}
+.link-btn.primary{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.link-btn.primary:hover{background:#162040}
+.link-btn.secondary{background:var(--white);color:var(--text);border-color:var(--border)}
+.link-btn.secondary:hover{background:var(--bg);border-color:#d1d5db}
+.photo-card{text-align:center}
+.photo-placeholder{width:200px;height:200px;border-radius:12px;background:linear-gradient(135deg,var(--teal-light),var(--gold-light));margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;border:3px solid var(--white);box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+.photo-placeholder i{font-size:72px;color:var(--teal);opacity:0.6}
+.contact-info{font-size:12.5px;color:var(--text-muted);line-height:2}
+.contact-info a{color:var(--teal);text-decoration:none}
+.contact-info a:hover{text-decoration:underline}
+.section-divider{width:100%;height:1px;background:var(--border);max-width:960px;margin:0 auto}
+section{max-width:960px;margin:0 auto;padding:2.5rem 2rem}
+section h2{font-family:'Crimson Pro',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--teal);display:inline-block}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:1rem}
+.area-card{background:var(--teal-light);border-radius:8px;padding:1rem 1.2rem;border-left:3px solid var(--teal)}
+.area-card h3{font-size:13.5px;font-weight:500;color:var(--teal);margin-bottom:0.3rem}
+.area-card p{font-size:12.5px;color:var(--text-muted);line-height:1.5}
+.pub-list{display:flex;flex-direction:column;gap:1rem}
+.pub{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;transition:box-shadow 0.2s}
+.pub:hover{box-shadow:0 2px 12px rgba(0,0,0,0.07)}
+.pub-title{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:0.4rem;line-height:1.4}
+.pub-authors{font-size:12.5px;color:var(--text-muted);margin-bottom:0.3rem}
+.pub-authors strong{color:var(--teal);font-weight:500}
+.pub-venue{font-size:12px;color:var(--text-muted)}
+.pub-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500;margin-left:8px}
+.badge-journal{background:var(--teal-light);color:var(--teal)}
+.badge-preprint{background:var(--gold-light);color:var(--gold)}
+.badge-citations{background:#f3f4f6;color:var(--text-muted)}
+.timeline{display:flex;flex-direction:column;gap:0}
+.timeline-item{display:grid;grid-template-columns:140px 1fr;gap:1.5rem;padding:1.2rem 0;border-bottom:1px solid var(--border)}
+.timeline-item:last-child{border-bottom:none}
+.timeline-dates{font-size:12.5px;color:var(--text-muted);font-weight:500;padding-top:2px}
+.timeline-content h3{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:0.2rem}
+.timeline-content p{font-size:13px;color:var(--text-muted);line-height:1.5}
+.timeline-content .institution{color:var(--teal);font-weight:500}
+footer{background:var(--navy);color:rgba(255,255,255,0.6);text-align:center;padding:1.5rem;font-size:12.5px;margin-top:2rem}
+footer a{color:rgba(255,255,255,0.8);text-decoration:none}
+.tag{display:inline-block;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:11.5px;color:var(--text-muted);margin:2px}
+@media(max-width:700px){
+.hero{grid-template-columns:1fr}
+.photo-card{order:-1}
+nav ul{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Dr Somayeh Mehrabankar</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero" id="about">
+  <div class="hero-text">
+    <div class="title">Quantum Physicist &amp; Researcher</div>
+    <h1>Dr Somayeh<br>Mehrabankar</h1>
+    <div class="affil">Independent Researcher, Melbourne, Australia<br>
+    Senior Science Tutor, Fraser's Medical Institute</div>
+    <p>I am a quantum physicist with a PhD in quantum information theory and over 10 years of international research experience across Iran, Czech Republic, Spain, and Australia. My research focuses on quantum correlations, entanglement theory, open quantum systems, Gaussian and non-Gaussian states of light, and linear optical quantum computing.</p>
+    <p>I have 11 peer-reviewed publications in leading physics journals and two preprints currently under review at Physical Review A and Physical Review E. I am passionate about both fundamental quantum physics and its translation into real-world quantum technologies.</p>
+    <div class="links">
+      <a href="https://scholar.google.com/citations?user=iZuRH0MAAAAJ" class="link-btn primary" target="_blank"><i class="ti ti-school" aria-hidden="true"></i> Google Scholar</a>
+      <a href="https://orcid.org/0000-0003-1604-4115" class="link-btn secondary" target="_blank"><i class="ti ti-id-badge" aria-hidden="true"></i> ORCID</a>
+      <a href="https://www.linkedin.com/in/somayeh-mehrabankar-335159281" class="link-btn secondary" target="_blank"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      <a href="mailto:somayeh.mehrabankar@yahoo.com" class="link-btn secondary"><i class="ti ti-mail" aria-hidden="true"></i> Email</a>
+    </div>
+  </div>
+  <div class="photo-card">
+    <div class="photo-placeholder" style="background:none;padding:0;overflow:hidden;">
+      <img src="photo.jpg" alt="Dr Somayeh Mehrabankar" style="width:200px;height:200px;object-fit:cover;border-radius:12px;display:block;">
+    </div>
+    <div class="contact-info">
+      <div><i class="ti ti-mail" style="font-size:13px;vertical-align:-1px" aria-hidden="true"></i> <a href="mailto:somayeh.mehrabankar@yahoo.com">somayeh.mehrabankar@yahoo.com</a></div>
+      <div><i class="ti ti-phone" style="font-size:13px;vertical-align:-1px" aria-hidden="true"></i> 0420 242 231</div>
+      <div><i class="ti ti-map-pin" style="font-size:13px;vertical-align:-1px" aria-hidden="true"></i> Melbourne, VIC, Australia</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<section id="research">
+  <h2>Research Interests</h2>
+  <div class="areas">
+    <div class="area-card">
+      <h3>Quantum Correlations</h3>
+      <p>Entanglement, quantum discord, and quantum steering in bipartite and multipartite systems</p>
+    </div>
+    <div class="area-card">
+      <h3>Open Quantum Systems</h3>
+      <p>Lindblad master equation, Markovian dynamics, decoherence in coupled oscillator systems</p>
+    </div>
+    <div class="area-card">
+      <h3>Gaussian &amp; Non-Gaussian States</h3>
+      <p>Quadrature Coherence Scale, non-Gaussianity measures, squeezed thermal states</p>
+    </div>
+    <div class="area-card">
+      <h3>Quantum Communication</h3>
+      <p>Secure quantum teleportation, quantum key distribution, quantum steering protocols</p>
+    </div>
+    <div class="area-card">
+      <h3>Linear Optical QC</h3>
+      <p>Heralded entangled state generation, Riemannian optimisation on unitary manifolds</p>
+    </div>
+    <div class="area-card">
+      <h3>Quantum Simulation</h3>
+      <p>Many-body Hamiltonians, spin ladder systems, qubit reduction techniques</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <div class="pub-list">
+
+    <div class="pub">
+      <div class="pub-title">Dynamical Evolution of Quantum Correlations and Decoherence in Coupled Oscillators Interacting with a Thermal Reservoir<span class="pub-badge badge-preprint">Preprint</span></div>
+      <div class="pub-authors"><strong>S. Mehrabankar</strong>, F. Abbasnezhad, D. Afshar, A. Isar</div>
+      <div class="pub-venue">arXiv:2603.22994 — Submitted to Physical Review E (2025)</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Entanglement Transfer Dynamics in a Two-Leg Spin Ladder Under a Selective Magnetic Field<span class="pub-badge badge-preprint">Preprint</span></div>
+      <div class="pub-authors">S. Ghanavat, A. Sabour, <strong>S. Mehrabankar</strong></div>
+      <div class="pub-venue">arXiv:2603.27511 — Submitted to Physical Review A (2025)</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Reducing the Number of Qubits in Quantum Simulations of One Dimensional Many-Body Hamiltonians<span class="pub-badge badge-journal">Journal</span><span class="pub-badge badge-citations">1 citation</span></div>
+      <div class="pub-authors"><strong>S. Mehrabankar</strong>, M.A. García-March, C.G. Almudéver, A. Pérez</div>
+      <div class="pub-venue">New Journal of Physics 26 (8), 083023 — 2024</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Effect of Noisy Environment on Secure Quantum Teleportation of Unimodal Gaussian States<span class="pub-badge badge-journal">Journal</span><span class="pub-badge badge-citations">6 citations</span></div>
+      <div class="pub-authors"><strong>S. Mehrabankar</strong>, P. Mahmoudi, F. Abbasnezhad, D. Afshar, A. Isar</div>
+      <div class="pub-venue">Quantum Information Processing 23 (10), 343 — 2024</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Adaptive Time Compressed QITE (ACQ) and its Geometrical Interpretation<span class="pub-badge badge-preprint">arXiv</span><span class="pub-badge badge-citations">1 citation</span></div>
+      <div class="pub-authors">A.A. Meléndez, C.G. Almudéver, M.A. Garcia-March, et al. (incl. <strong>S. Mehrabankar</strong>)</div>
+      <div class="pub-venue">arXiv:2510.15781 — 2025</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Two-Mode Gaussian States as Resource of Secure Quantum Teleportation in Open Systems<span class="pub-badge badge-journal">Journal</span><span class="pub-badge badge-citations">10 citations</span></div>
+      <div class="pub-authors">D. Afshar, F. Abbasnezhad, <strong>S. Mehrabankar</strong>, A. Isar</div>
+      <div class="pub-venue">Chinese Journal of Physics 68, 419–425 — 2020</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Quantum Fidelity Evolution of Penning Trap Coherent States in an Asymmetric Open Quantum System<span class="pub-badge badge-journal">Journal</span><span class="pub-badge badge-citations">4 citations</span></div>
+      <div class="pub-authors"><strong>S. Mehrabankar</strong>, D. Afshar, M. Jafarpour</div>
+      <div class="pub-venue">Quantum Information &amp; Computation 19 (5–6), 413–423 — 2019</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Markovian Thermal Evolution of Entanglement and Decoherence of GHZ State<span class="pub-badge badge-journal">Journal</span><span class="pub-badge badge-citations">4 citations</span></div>
+      <div class="pub-authors">F. Abbasnezhad, <strong>S. Mehrabankar</strong>, D. Afshar, M. Jafarpour</div>
+      <div class="pub-venue">European Physical Journal Plus 133 (8), 298 — 2018</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Evolution of Quantum Correlations in Open Quantum Systems Consisting of Two Coupled Oscillators<span class="pub-badge badge-journal">Journal</span><span class="pub-badge badge-citations">8 citations</span></div>
+      <div class="pub-authors">F. Abbasnezhad, <strong>S. Mehrabankar</strong>, D. Afshar, M. Jafarpour</div>
+      <div class="pub-venue">Quantum Information Processing 16 (4), 103 — 2017</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Entanglement Evolution in Open Quantum Systems Consisting of Asymmetric Oscillators<span class="pub-badge badge-journal">Journal</span><span class="pub-badge badge-citations">13 citations</span></div>
+      <div class="pub-authors">D. Afshar, <strong>S. Mehrabankar</strong>, F. Abbasnezhad</div>
+      <div class="pub-venue">European Physical Journal D 70 (3), 64 — 2016</div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Entanglement of Multiphoton Supercoherent States<span class="pub-badge badge-journal">Journal</span></div>
+      <div class="pub-authors">A. Motamedinasab, <strong>S. Mehrabankar</strong></div>
+      <div class="pub-venue">Optik 204, 163845</div>
+    </div>
+
+  </div>
+  <p style="margin-top:1rem;font-size:13px;color:var(--text-muted)">Full list on <a href="https://scholar.google.com/citations?user=iZuRH0MAAAAJ" style="color:var(--teal);text-decoration:none" target="_blank">Google Scholar</a> &middot; ORCID: <a href="https://orcid.org/0000-0003-1604-4115" style="color:var(--teal);text-decoration:none" target="_blank">0000-0003-1604-4115</a></p>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="experience">
+  <h2>Academic Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dates">Jan 2025 – Apr 2026</div>
+      <div class="timeline-content">
+        <h3>Research Collaboration</h3>
+        <p><span class="institution">Centre for Quantum Dynamics, Griffith University</span> — Brisbane, Australia<br>Heralded W-state generation using linear optical circuits. Riemannian Conjugate Gradient optimisation on the unitary manifold in Julia, achieving fidelity exceeding 99.87%.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">Jan 2023 – Jan 2025</div>
+      <div class="timeline-content">
+        <h3>Postdoctoral Researcher</h3>
+        <p><span class="institution">University of Valencia – CSIC</span> — Valencia, Spain<br>Non-Gaussianity measures, Quadrature Coherence Scale, quantum resource theory for quantum communication. Supervised by Prof. Armando Pérez.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">2020 – 2022</div>
+      <div class="timeline-content">
+        <h3>Postdoctoral Researcher</h3>
+        <p><span class="institution">Palacky University Olomouc</span> — Czech Republic<br>Markovian dynamics of quantum correlations. Gaussian quantum teleportation in dissipative environments.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">2017 – 2020</div>
+      <div class="timeline-content">
+        <h3>University Lecturer</h3>
+        <p><span class="institution">Petroleum University of Technology &amp; Shahid Chamran University</span> — Iran<br>Physics 1, 2, and 3 lectures and laboratory instruction at undergraduate level.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">2012 – 2017</div>
+      <div class="timeline-content">
+        <h3>PhD in Fundamental Physics</h3>
+        <p><span class="institution">Shahid Chamran University of Ahvaz</span> — Iran<br>Thesis: Quantum correlations and decoherence in open quantum systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="teaching">
+  <h2>Teaching &amp; Tutoring</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dates">Nov 2025 – present</div>
+      <div class="timeline-content">
+        <h3>Senior Science Tutor — GAMSAT Section 3</h3>
+        <p><span class="institution">Fraser's Medical Institute</span> — Melbourne, Australia<br>Physics, Chemistry and Mathematics for medical school entry preparation.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dates">2009 – present</div>
+      <div class="timeline-content">
+        <h3>Private Tutor</h3>
+        <p><span class="institution">Independent</span> — Melbourne, Australia &amp; Online Australia-wide<br>Physics and Mathematics for VCE, IB, and university students.</p>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:1.5rem">
+    <span class="tag">Physics (VCE, IB, University)</span>
+    <span class="tag">Mathematics</span>
+    <span class="tag">GAMSAT Section 3</span>
+    <span class="tag">Quantum Physics</span>
+    <span class="tag">Calculus</span>
+    <span class="tag">Statistics</span>
+    <span class="tag">Chemistry</span>
+    <span class="tag">Online Australia-wide</span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="font-size:14px;color:var(--text-muted);margin-bottom:1.2rem">Please feel free to get in touch for research collaborations, tutoring enquiries, or any other questions.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
+    <a href="mailto:somayeh.mehrabankar@yahoo.com" class="link-btn primary" style="justify-content:center;padding:12px"><i class="ti ti-mail" aria-hidden="true"></i> somayeh.mehrabankar@yahoo.com</a>
+    <a href="https://scholar.google.com/citations?user=iZuRH0MAAAAJ" class="link-btn secondary" style="justify-content:center;padding:12px" target="_blank"><i class="ti ti-school" aria-hidden="true"></i> Google Scholar</a>
+    <a href="https://orcid.org/0000-0003-1604-4115" class="link-btn secondary" style="justify-content:center;padding:12px" target="_blank"><i class="ti ti-id-badge" aria-hidden="true"></i> ORCID</a>
+    <a href="https://www.linkedin.com/in/somayeh-mehrabankar-335159281" class="link-btn secondary" style="justify-content:center;padding:12px" target="_blank"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <p>Dr Somayeh Mehrabankar &middot; Quantum Physicist &middot; Melbourne, Australia &middot; <a href="mailto:somayeh.mehrabankar@yahoo.com">somayeh.mehrabankar@yahoo.com</a></p>
+</footer>
+
+</body>
+</html>
